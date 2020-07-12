@@ -82,7 +82,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "solc-${{ env.SOURCE_REPO_SHA_SHORT }}"
+          tag_name: "${{ env.SOURCE_REPO_SHA_SHORT }}"
           release_name: Solidity compiller ${{ env.SOURCE_REPO_SHA_SHORT }}
           body: "Source commit: ${{ env.SOURCE_REPO_COMMIT_LINK }}"
           draft: false
