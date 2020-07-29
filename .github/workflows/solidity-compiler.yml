@@ -71,6 +71,7 @@ jobs:
         if: ${{ env.IS_NEW_REVISION == 'true' }}
         run: |          
           cd $GITHUB_WORKSPACE/compiler/build/solc
+          ./solc --version
           tar -czvf $GITHUB_WORKSPACE/solc.tar.gz solc
           cd $GITHUB_WORKSPACE/lib
           tar -czvf $GITHUB_WORKSPACE/stdlib_sol.tvm.tar.gz stdlib_sol.tvm
